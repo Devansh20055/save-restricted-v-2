@@ -1,7 +1,7 @@
 
 
 import os
-from .. import bot as bot
+from .. import bot 
 from telethon import events, Button
 
 from ethon.mystarts import start_srb
