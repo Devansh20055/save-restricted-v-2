@@ -12,13 +12,13 @@ async def join(client, invite_link):
     try:
         hash_ = invite_link.split("+")[1]
         await client(ImportChatInviteRequest(hash_))
-        return True, "Successfully joined the Channel."
+        return True, "🚀 Successfully joined the Channel. 🚀"
     except errors.UserAlreadyParticipantError:
-        return False, "You have already joined the Channel."
+        return False, "!!! You have already joined the Channel.!!!"
     except errors.InviteHashExpiredError:
-        return False, "Link Expired/Wrong URL."
+        return False, "Link Expired/Wrong URL. 😢 "
     except FloodWaitError:
-        return False, "Too many requests, try again later!"
+        return False, "😅 Too many requests, try again later! \n 🔆@TEAM_SILENT_KING🔆"
     
 #Regex---------------------------------------------------------------------------------------------------------------
 #to get the url from event
