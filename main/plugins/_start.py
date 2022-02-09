@@ -53,5 +53,5 @@ async def start(event):
                       buttons=[
                               [Button.inline("SET THUMB.", data="sett"),
                                Button.inline("REM THUMB.", data="remt"),
-                                Button("DEVELPOERS .",URL="https://t.me/team_silent_king")]
+                                ]
                               ])
