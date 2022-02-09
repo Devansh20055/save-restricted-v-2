@@ -2,7 +2,7 @@
 
 import time, os
 
-from .. import bot as Drone
+from .. import bot as bot
 from .. import userbot
 from .. import FORCESUB as fs
 
@@ -14,7 +14,7 @@ from ethon.telefunc import fast_upload, fast_download, force_sub
 
 from main.plugins.helpers import get_link, join, screenshot
 
-@Drone.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
+@bot.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
 async def clone(event):
     try:
         link = get_link(event.text)
