@@ -8,7 +8,7 @@ from ethon.mystarts import start_srb
     
 S = '/' + 's' + 't' + 'a' + 'r' + 't'
 
-@Drone.on(events.callbackquery.CallbackQuery(data="set"))
+@bot.on(events.callbackquery.CallbackQuery(data="set"))
 async def sett(event):    
     Drone = event.client                    
     button = await event.get_message()
@@ -32,7 +32,7 @@ async def sett(event):
         os.rename(path, f'./{event.sender_id}.jpg')
         await t.edit("Temporary thumbnail saved!")
         
-@Drone.on(events.callbackquery.CallbackQuery(data="rem"))
+@bot.on(events.callbackquery.CallbackQuery(data="rem"))
 async def remt(event):  
     Drone = event.client            
     await event.edit('Trying.')
@@ -42,7 +42,7 @@ async def remt(event):
     except Exception:
         await event.edit("No thumbnail saved.")                        
   
-@Drone.on(events.NewMessage(incoming=True, pattern=f"{S}"))
+@bot.on(events.NewMessage(incoming=True, pattern=f"{S}"))
 async def start(event):
     await start_srb(event)
     
