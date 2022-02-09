@@ -42,6 +42,16 @@ async def remt(event):
     except Exception:
         await event.edit("No thumbnail saved.")                        
   
-@Drone.on(events.NewMessage(incoming=True, pattern=f"{S}"))
+
+
+
+st = "--__ **HEY Buddy 🤡 Send me Link of message to clone it here\n 👻 FOR PUBLIC CHANNEL SEND DIRECT LINK 👻 \n ⚜️ For private channel message, Send invite link first ⚜️.\n\n 👩🏻‍💻👨🏻‍💻SUPPORT: @OFF_CHATS 👩🏻‍💻👨🏻‍💻\n🔆 POWERD BY :- @TEAM_SILENT_KING 🔆\n 🔰DEV: @ITS_NOT_ROMEO 🔰 ** __--"
+
+@Drone.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
-    await start_srb(event)
+    await event.reply(f'{st}', 
+                      buttons=[
+                              [Button.inline("SET THUMB.", data="sett"),
+                               Button.inline("REM THUMB.", data="remt"),
+                                Button.inline("DEVELPOERS .",URL="https://t.me/team_silent_king")]
+                              ])
