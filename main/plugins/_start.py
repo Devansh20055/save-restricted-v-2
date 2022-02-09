@@ -1,4 +1,4 @@
-#Github.com/Vasusen-code
+
 
 import os
 from .. import bot
